@@ -15,30 +15,7 @@
       "password": "$2a$10$IqnZGI6WBbJwm8ZA3ddiPuhIfva/ItUIlJNZurjcPw8JL7x.FMFq2",
       "roles": "admin",
       "id": 3
-    },
-    {
-      "email": "correo1@gmail.com",
-      "password": "$2a$10$Arg.C.uuOqNfiTqtRm/MXeaex7Rc3XZSGbLSsp24dMy4Z17XRh9Dm",
-      "roles": "users",
-      "id": 4
-    },
-    {
-      "email": "1@correo.com",
-      "password": "$2a$10$4ir4bn3HjL0XmflDD/Jtg.XvZSLf10.de.mklSUfFRVBf27XivJoi",
-      "roles": "admin",
-      "id": 5
-    },
-    {
-      "email": "2@correo.com",
-      "password": "$2a$10$CKrGWbq8eAssnYw2MK1DDOaBiCeHYYUIy2o/5X.bzKHGYmpal3RVe",
-      "roles": "admin",
-      "id": 6
-    },
-    {
-      "email": "3@correo.com",
-      "password": "$2a$10$UsBel5KSWRQ7PDBkO1f/1.OT9w9FK/qM8KbuxwJHo6NOhPkuRiSXy",
-      "roles": "users",
-      "id": 7
     }
+    
   ]
 }
