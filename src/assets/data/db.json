@@ -15,6 +15,12 @@
       "password": "$2a$10$IqnZGI6WBbJwm8ZA3ddiPuhIfva/ItUIlJNZurjcPw8JL7x.FMFq2",
       "roles": "admin",
       "id": 3
+    },
+    {
+      "email": "and@mail.com",
+      "password": "$2a$10$GhQmrWbqF.UN1M9PaQEw0./ORwig7PDT9bOL5JQNrUglarRRIrtYC",
+      "roles": "users",
+      "id": 4
     }
   ]
 }

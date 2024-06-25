@@ -1,32 +1,25 @@
-<style>
-    #orders-table {
-      border-collapse: collapse;
-      width: 100%;
-    }
-  
-    #orders-table th, #orders-table td {
-      border: 1px solid #ddd;
-      padding: 8px;
-      text-align: left;
-    }
-  
-    #orders-table th {
-      background-color: #f0f0f0;
-    }
-  
-    #orders-table tr:nth-child(even) {
-      background-color: #f2f2f2;
-    }
-  </style>
-  
-  <table id="orders-table">
-    <thead>
-      <tr>
-        <th>Numero de Orden</th>
-        <th>Mesa</th>
-        <th>Nombre del cliente</th>
-        <th>Menu</th>
-        <th>Precio</th>
-      </tr>
-    </thead>
-  </table>
+<body class="">
+    <div class="container mt-3">
+      <h2 class="text-center">Datos Ingresados</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Categoria</th>
+            <th>Acciones</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>
+                <!-- <button class="btn btn-success btn-sm" [routerLink]="['/detalles', producto.id]">Detalles</button> -->
+                <button class="btn btn-success btn-sm">Editar  </button>
+                <button class="btn btn-danger btn-sm">Eliminar</button>
+              </td>
+            </tr>
+            </tbody>
+            </table>
+            </div>
+            </body>
