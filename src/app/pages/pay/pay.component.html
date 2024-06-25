@@ -1,9 +1,21 @@
-<div class="payment-form">
-    <h2>Payment Details</h2>
-    <div class="form-group">
-      <label for="card-element">Credit or Debit Card</label>
-      <div id="card-element" class="form-control"></div>
-      <div class="card-errors" role="alert">{{ error }}</div>
-    </div>
-    <button (click)="createToken()">Submit Payment</button>
+<form class="payment-form">
+  <h2>Payment Details</h2>
+  <div class="form-group">
+    <label for="name">Nombre de la tarjeta</label>
+    <input type="text" id="name" class="form-control" required>
   </div>
+  <div class="form-group">
+    <label for="email">E-mail</label>
+    <input type="email" id="email" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label for="card-element">Credito o debito</label>
+    <div id="card-element" class="form-control"></div>
+    <div class="card-errors" role="alert">{{ error }}</div>
+  </div>
+  <div class="form-group">
+    <label for="address">Direccion-domicilio</label>
+    <input type="text" id="address" class="form-control" required>
+  </div>
+  <button (click)="createToken()">Realizar pago</button>
+</form>
