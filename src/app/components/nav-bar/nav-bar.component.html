@@ -17,27 +17,30 @@
                 <li class="nav-item">
                     <a class="nav-link" routerLink="suscripcion">Suscripción</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="menu">Menu</a>
-                </li>
+                @if (ocultar != 'true') {
                 <li class="nav-item">
                     <a class="nav-link" routerLink="login">Iniciar Sesion</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="ordenes">Ordenes</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="pedidos">Gestionar Pedidos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="pay">Pago Tarjeta</a>
-                </li>
+                }@else {
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="ordenes">Ordenes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="pedidos">Gestionar Pedidos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="pay">Pago Tarjeta</a>
+                    </li>   
+                }
             </ul>
         </div>
-        <!-- @if (ocultar == 'true') {
+        @if (ocultar == 'true') {
         <div class="ml-auto">
             <button class="btn btn-sm btn-danger" (click)="logout()">Cerrar Sesión</button>
         </div>
-        } -->
+        }
     </div>
 </nav>

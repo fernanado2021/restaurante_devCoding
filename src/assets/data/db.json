@@ -1,3 +1,20 @@
 {
-    "users": []
+  "users": [
+    {
+      "email": "admin@mail.com",
+      "password": "$2a$10$fHULOECQR0ZO7DKb5vX0hOxe2avMN3/t//tMSAbGTRnQvjdI7FrdC",
+      "id": 1
+    },
+    {
+      "email": "super_admin@gmail.com",
+      "password": "$2a$10$90qCulQqmUwUtvEzem82xebsaXWdhdmRFSKHFnsfwB02mQm.AiDqq",
+      "id": 2
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$IqnZGI6WBbJwm8ZA3ddiPuhIfva/ItUIlJNZurjcPw8JL7x.FMFq2",
+      "roles": "admin",
+      "id": 3
+    }
+  ]
 }

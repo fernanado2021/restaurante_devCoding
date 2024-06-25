@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { UsuariosService } from '../../service/usuarios.service';
+
 
 @Component({
   selector: 'app-login',
@@ -9,5 +11,28 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+  servicio = inject(UsuariosService)
 
+  email: any
+  password: any
+  token: any
+
+  login(formulario:any){
+    this.servicio.postUser(formulario.value).subscribe(p =>{
+      this.token = p.accessToken
+      console.log(p);
+      
+      if (this.token != '') {
+        localStorage.setItem("token",'true')
+        if (p.user.roles == 'admin') {
+          localStorage.setItem("admin",'true')
+          window.location.href=('menu')
+        }else if (p.user.roles == 'users') {
+          localStorage.setItem("users",'true')
+          window.location.href=('ordenes')
+        }
+      }
+      
+    })
+  }
 }

@@ -7,21 +7,21 @@ import { OrdenesComponent } from './pages/ordenes/ordenes.component';
 import { PedidosComponent } from './pages/pedidos/pedidos.component';
 import { Error404Component } from './pages/error404/error404.component';
 import { MenuComponent } from './pages/menu/menu.component';
-import { meseroGuard } from './guards/guardianes.guard';
+import { loginGuard, meseroGuard } from './guards/guardianes.guard';
 import { EditarMenuComponent } from './pages/editar-menu/editar-menu.component';
 import { EditarMeserosComponent } from './pages/editar-meseros/editar-meseros.component';
 import { PaymentComponent } from './pages/pay/pay.component';
 
 export const routes: Routes = [
-    { path: 'home', component: HomeComponent},
+    { path: 'home', component: HomeComponent },
     { path: 'suscripcion', component: SuscripcionComponent },
     { path: 'login', component: LoginComponent },
-    { path: 'ordenes', component: OrdenesComponent, canActivate:[meseroGuard]},
-    { path: 'pedidos', component: PedidosComponent, canMatch:[meseroGuard]},
-    { path: 'menu', component: MenuComponent},
-    {path: 'pay', component: PaymentComponent},
-    {path: 'editarM/:idEditm', component:EditarMenuComponent},
-    {path:'editar/:idEditar', component:EditarMeserosComponent},
-    { path: '**', component: Error404Component},
-    
+    { path: 'ordenes', component: OrdenesComponent, canActivate: [meseroGuard] },
+    { path: 'pedidos', component: PedidosComponent, canActivate: [meseroGuard] },
+    { path: 'menu', component: MenuComponent, canActivate: [loginGuard] },
+    { path: 'pay', component: PaymentComponent, canActivate: [meseroGuard] },
+    { path: 'editarM/:idEditm', component: EditarMenuComponent, canActivate: [loginGuard] },
+    { path: 'editar/:idEditar', component: EditarMeserosComponent, canActivate: [loginGuard] },
+    { path: '**', component: Error404Component },
+
 ];
