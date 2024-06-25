@@ -23,5 +23,6 @@ export const routes: Routes = [
     {path: 'editarM/:idEditm', component:EditarMenuComponent},
     {path:'editar/:idEditar', component:EditarMeserosComponent},
     { path: '**', component: Error404Component},
+    {path: '', redirectTo:'home', pathMatch:'full'}
     
 ];
