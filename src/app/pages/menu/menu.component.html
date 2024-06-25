@@ -1,1 +1,40 @@
-<p>menu works!</p>
+{{articulos | json}}
+<div class="container">
+
+    
+    <br>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                
+                <th>id </th>
+                <th>Numero de Orden</th>
+                <th>Nombre del cliente</th>
+                
+                <th>Menu</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (orden of articulos; track orden) {
+            <tr>
+                
+               
+                <td>{{orden.id}}</td>
+                <td>{{orden.norder}}</td>
+                <td>{{orden.nameClient}}</td>
+                <td>{{orden.menu.nameMenu
+                    }}</td>
+                <td>{{orden.priceTotal}}</td>
+                <td>
+                    <button class="btn btn-danger" (click)="eliminar(orden.id)">Eliminar</button>
+                    <button class="btn btn-success" [routerLink]="['/editar-detalles', orden.id]">Editar</button>
+                    
+                </td>
+                
+            </tr>
+            }
+        </tbody>
+    </table>
+    <button class="btn btn-primary" [routerLink]="['/juegos-detalles']">Agregar nuevo juego</button>
+</div>
