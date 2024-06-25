@@ -21,6 +21,6 @@ export class SuscripcionComponent {
 
   registro(datos: any) {
     this.servicio.postUser2(datos.value).subscribe()
-    window.location.reload()
+    window.location.href='login'
   }
 }

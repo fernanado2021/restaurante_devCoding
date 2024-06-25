@@ -11,17 +11,22 @@ import { UsuariosService } from '../../service/usuarios.service';
 })
 export class NavBarComponent {
 
-  servicio = inject(UsuariosService)
-  constructor(private router:Router){}
-  token: any
+  s = inject(UsuariosService)
   
-  logout() {
-    localStorage.removeItem("token")
-    localStorage.removeItem("admin")
-    localStorage.removeItem("users")
-    window.location.href=('Login')
+  
+
+  
+  tipo=localStorage.getItem('tipo')
+
+  deslogin(){
+    localStorage.setItem('token',"false")
+    localStorage.setItem('tipo',"0")
+    window.location.href='login'
   }
-  
-  ///Ocultar ventanas
-  ocultar = localStorage.getItem('token')
+
+  tipo0(){
+    localStorage.setItem('tipo',"0") 
+  }
+ 
+
 }

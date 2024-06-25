@@ -8,7 +8,7 @@ export class StripeService {
   private stripePromise: Promise<Stripe | null>;
 
   constructor() {
-    this.stripePromise = loadStripe('TU_CLAVE_PUBLICA_DE_STRIPE');
+    this.stripePromise = loadStripe('STRIPE');
   }
 
   getStripe() {

@@ -1,18 +1,18 @@
 import { CanActivateFn, CanMatchFn } from '@angular/router';
 
-export const loginGuard: CanActivateFn = (route, state) => {
-  if (localStorage.getItem('admin') == 'true') {
-    return true;
-  } else {
-    return false;
+export const adminGuard: CanActivateFn = (route, state) => {
+  if(localStorage.getItem('tipo')=='1'){
+    return true
+  }else{
+  return false;
   }
 };
 
 export const meseroGuard: CanActivateFn = (route, state) => {
-  if (localStorage.getItem('users') == 'true') {
-    return true;
-  } else {
-    return false;
+  if(localStorage.getItem('tipo')=='2'){
+    return true
+  }else{
+  return false;
   }
 };
 

@@ -16,23 +16,41 @@ export class LoginComponent {
   email: any
   password: any
   token: any
+  tipo: any
 
   login(formulario:any){
     this.servicio.postUser(formulario.value).subscribe(p =>{
       this.token = p.accessToken
-      console.log(p);
-      
+      this.tipo=p.user.roles
+
+                
       if (this.token != '') {
-        localStorage.setItem("token",'true')
-        if (p.user.roles == 'admin') {
-          localStorage.setItem("admin",'true')
-          window.location.href=('menu')
-        }else if (p.user.roles == 'users') {
-          localStorage.setItem("users",'true')
-          window.location.href=('ordenes')
-        }
+        localStorage.setItem("token", 'true')
+        
+      }
+
+      if (this.tipo === 'admin') {
+        localStorage.setItem("tipo", '1')
+      }else{
+        localStorage.setItem("tipo", '2')
       }
       
+      window.location.reload()
+
+      if(localStorage.getItem('tipo')=='1'){
+        window.location.href='pedidos'
+
+      }
+       
+      if(localStorage.getItem('tipo')=='2'){
+        window.location.href= 'gestion-libros'
+      }
+          
+
+    
+
     })
   }
+
+  
 }
