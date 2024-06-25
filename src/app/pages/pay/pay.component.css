@@ -1,0 +1,50 @@
+.payment-form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+  }
+  
+  /* Estilo del título */
+  .payment-form h2 {
+    text-align: center;
+    color: #32325d;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  /* Estilos para los grupos de formulario */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  #card-element {
+    border: 1px solid #ccd0d2;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #fafafa;
+    box-shadow: 0 1px 3px rgba(230, 235, 241, 0.5);
+  }
+  
+  .card-errors {
+    color: #fa755a;
+    margin-top: 10px;
+  }
+  
+  button {
+    width: 100%;
+    background-color: #32325d;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #43458b;
+  }
