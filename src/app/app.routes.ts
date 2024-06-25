@@ -12,7 +12,7 @@ export const routes: Routes = [
     { path: 'suscripcion', component: SuscripcionComponent },
     { path: 'login', component: LoginComponent },
     { path: 'ordenes', component: OrdenesComponent },
-    { path: 'Gestionar', component: PedidosComponent },
+    { path: 'pedidos', component: PedidosComponent },
     { path: '**', component: Error404Component},
     {path: '', redirectTo: 'home', pathMatch: 'full'}
 ];
